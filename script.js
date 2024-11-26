@@ -17,7 +17,8 @@ window.onload = function(){
         var lName = formHandle.l_name.value;
         var email = formHandle.email.value;
         var message = formHandle.message.value;
-        
+        var errorCount = 0;
+
         console.log(fName);
         console.log(lName);
         console.log(email);
@@ -36,28 +37,36 @@ window.onload = function(){
         if(fName === ""){
             firstError.innerHTML = "Please enter your First Name.";
             firstError.classList= "";
+            errorCount++;
         }
         if(lName === ""){
             lastError.innerHTML= "Please enter your Last Name.";
             lastError.classList ="";
+            errorCount++;
         }
         if(email === ""){
             emailError.innerHTML = "Please enter your Email Address.";
             emailError.classList ="";
+            errorCount++;
         }
         if(!regExEmail.test(email)){
             emailError.innerHTML = "Invalid Email.";
             emailError.classList ="";
+            errorCount++;
 
         }
         if(message === ""){
             messageError.innerHTML = "Please enter a Message.";
             messageError.classList="";
+            errorCount++;
         }
        
         console.log("submit was clicked");
-       
+        
+       if(errorCount > 0){
         e.preventDefault();
+       }
+        
 
     })
 

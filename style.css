@@ -1,25 +1,43 @@
 body{
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+
+    color: rgb(184, 181, 181);
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+label{
+
+    color: rgb(184, 181, 181);
 }
 
 #formContainer{
     margin: 50px;
-    padding: 25px;
+    padding: 50px;
     height: auto;
     width: 265px;
-    border-radius: 20px;
-    background-color: lightgrey;
-    box-shadow: 5px 5px 10px gray;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 15px 5px 100px 30px rgba(0, 0, 0, 0.085);
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 }
 
 .formField{
 
     display: flex;
     justify-content: space-between;
+    width: 275px;
 }
 
 #form_submit{
@@ -30,4 +48,41 @@ align-self: center;
 
 .error{
     display: none;
+}
+
+input{
+
+    border: 0;
+    background-color: rgb(244, 242, 242);
+    border-radius: 2px;
+}
+
+textarea{
+    border: 0;
+    background-color:rgb(244, 242, 242);
+    border-radius: 2px;
+}
+
+button{
+    border: 0;
+    background: linear-gradient(70deg, red, blue);
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
+    font-size: 14px;
+    width : 275px;
+    
+}
+
+button:hover {
+    background: red;
+}
+
+input:hover{
+
+    border: 1px solid blue;
+}
+
+textarea:hover{
+    border: 1px solid blue;
 }
